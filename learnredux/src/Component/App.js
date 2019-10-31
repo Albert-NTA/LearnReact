@@ -1,18 +1,22 @@
 import React, {Component} from 'react';
 import '../App.css';
+import './User.js'
+import User from './User.js';
 
 const users = [{
-  id : "1",
-  name: "A"
+  id: '001',
+  Name: "AAA"
 }, {
-  id: '2',
-  name: 'B'
+  id: '002',
+  Name: "BBB"
 }];
+
+
 class List extends Component {
   
   render() {
     return  ( <ol>
-                {users.map((id, name) => <li key = {id.id}> Name: {id.name} </li>)}
+                {users.map((id) => <li key = {id.id}> <User name={id.Name}/> </li>)}
               </ol>
     )
   }
